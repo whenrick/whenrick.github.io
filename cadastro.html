@@ -2,25 +2,26 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
     <link rel="stylesheet" href="css/style.css"> 
+    
     <title>Cadastro - Planting the Future</title>
 </head>
 <body>
 
-    <header class="cabecalho-principal">
-        <div class="logo-container">
-            <p class="logo-texto"><strong>Planting the Future</strong></p>
-        </div>
-        <nav class="navegacao-principal">
-            <ul class="menu-lista">
-                <li class="menu-item"><a href="index.html">Página Inicial</a></li>
-                <li class="menu-item"><a href="projetos.html">Nossos Projetos</a></li>
-                <li class="menu-item"><a href="cadastro.html">Seja Voluntário (Cadastro)</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">PLANTING THE FUTURE</a>
 
+        <button class="menu-hamburguer" id="menu-toggle" aria-label="Abrir Menu" aria-expanded="false">
+            &#9776; </button>
+
+        <ul class="menu-links" id="menu-links">
+            <li><a href="index.html">PÁGINA INICIAL</a></li>
+            <li><a href="projetos.html">NOSSOS PROJETOS</a></li>
+            <li><a href="cadastro.html">SEJA VOLUNTÁRIO (CADASTRO)</a></li>
+        </ul>
+    </nav>
     
     <main class="conteudo-principal">
 
@@ -96,38 +97,24 @@
 
             <button type="submit" class="botao-submit">Finalizar Cadastro</button>
 
-        </form> <div id="mensagem-sucesso" class="escondido">
+        </form> 
+        
+        <div id="mensagem-sucesso" class="escondido">
             <h2 class="secao-titulo">CADASTRO CONCLUÍDO!</h2>
             <p class="secao-paragrafo">
                 OBRIGADO POR SE JUNTAR À NOSSA MISSÃO.
                 ENTRAREMOS EM CONTATO EM BREVE.
             </p>
         </div>
-        </main> <footer class="rodape-principal">
+    </main> 
+    
+    <footer class="rodape-principal">
         <p class="rodape-copyright">
             &copy; 2025 Planting the Future. Todos os direitos reservados.
         </p>
     </footer>
 
-
-    <script>
-        const formCadastro = document.querySelector('.formulario-cadastro');
-        const mensagemSucesso = document.querySelector('#mensagem-sucesso');
-        const tituloPagina = document.querySelector('.titulo-pagina');
-        const introForm = document.querySelector('.formulario-introducao');
-        const linkVoltar = document.querySelector('.link-voltar');
-        
-        formCadastro.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            formCadastro.classList.add('escondido');
-            tituloPagina.classList.add('escondido');
-            introForm.classList.add('escondido');
-            linkVoltar.classList.add('escondido');
-            
-            mensagemSucesso.classList.remove('escondido');
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>

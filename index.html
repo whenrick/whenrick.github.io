@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="css/style.css">
+    
     <title>Planting the Future - Página Inicial</title>
 </head>
 <body>
 
-    <header class="cabecalho-principal">
-        <div class="logo-container">
-            <p class="logo-texto"><strong>Planting the Future</strong></p>
-        </div>
-        <nav class="navegacao-principal">
-            <ul class="menu-lista">
-                <li class="menu-item"><a href="cadastro.html">Seja Voluntário (Cadastro)</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <h1 class="logo">PLANTING THE FUTURE</h1>
+
+        <button class="menu-hamburguer" id="menu-toggle" aria-label="Abrir Menu" aria-expanded="false">
+            &#9776; </button>
+
+        <ul class="menu-links" id="menu-links">
+            <li><a href="index.html">PÁGINA INICIAL</a></li>
+            <li><a href="projetos.html">NOSSOS PROJETOS</a></li>
+            <li><a href="cadastro.html">SEJA VOLUNTÁRIO (CADASTRO)</a></li>
+        </ul>
+    </nav>
+
 
     <section class="hero-banner">
-        <h1 class="titulo-pagina">
-          <span class="titulo-linha-1">PLANTING</span>
-          <span class="titulo-linha-2">THE</span>
-          <span class="titulo-linha-3">FUTURE</span>
-        </h1>
+        
+        <h2 class="titulo-pagina">
+            <span class="titulo-linha-1">PLANTING</span>
+            <span class="titulo-linha-2">THE</span>
+            <span class="titulo-linha-3">FUTURE</span>
+        </h2>
+        
         <p class="hero-subtexto">
             Acreditamos que pequenas ações podem levar a grandes mudanças.
             Junte-se a nós nesta missão.
@@ -80,5 +87,6 @@
         </p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
-</html>    
+</html>

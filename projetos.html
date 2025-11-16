@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="css/style.css">
+    
     <title>Nossos Projetos - Planting the Future</title>
 </head>
 <body>
 
-    <header class="cabecalho-principal">
-        <div class="logo-container">
-            <p class="logo-texto"><strong>Planting the Future</strong></p>
-        </div>
-        <nav class="navegacao-principal">
-            <ul class="menu-lista">
-                <li class="menu-item"><a href="index.html">Página Inicial</a></li>
-                <li class="menu-item"><a href="projetos.html">Nossos Projetos</a></li>
-                <li class="menu-item"><a href="cadastro.html">Seja Voluntário (Cadastro)</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">PLANTING THE FUTURE</a>
+
+        <button class="menu-hamburguer" id="menu-toggle" aria-label="Abrir Menu" aria-expanded="false">
+            &#9776; </button>
+
+        <ul class="menu-links" id="menu-links">
+            <li><a href="index.html">PÁGINA INICIAL</a></li>
+            <li><a href="projetos.html">NOSSOS PROJETOS</a></li>
+            <li><a href="cadastro.html">SEJA VOLUNTÁRIO (CADASTRO)</a></li>
+        </ul>
+    </nav>
+
 
     <main class="conteudo-principal">
 
@@ -50,10 +53,12 @@
                 </ul>
             </div>
             
-        </article> <article class="projeto-card">
+        </article>
+        
+        <article class="projeto-card">
             
             <img 
-              src="/images/rio.jpg"
+              src="images/rio.jpg"
               alt="Projeto Rios Limpos" 
               class="projeto-imagem">
 
@@ -72,38 +77,46 @@
                 </ul>
             </div>
 
-        </article> </section> <section class="secao secao-voluntario">
+        </article> 
+    </section> 
+
+    <section class="secao secao-voluntario">
         <h2 class="secao-titulo">Seja um Voluntário!</h2>
-        </section>
+        <p class="secao-paragrafo" style="margin-bottom: 25px;">
+            O seu tempo e talento são essenciais para a nossa causa. 
+            Temos vagas para plantio, organização de eventos e muito mais.
+        </p>
+        <a href="cadastro.html" class="hero-botao">QUERO ME CADASTRAR</a>
+    </section>
 
-        <section class="secao secao-doacao">
-    <h2 class="secao-titulo">Como Doar</h2>
-    <p class="secao-paragrafo">
-        Cada doação transforma-se diretamente em árvores plantadas e
-        ecossistemas recuperados. A sua contribuição faz a diferença.
-    </p>
+    <section class="secao secao-doacao">
+        <h2 class="secao-titulo">Como Doar</h2>
+        <p class="secao-paragrafo">
+            Cada doação transforma-se diretamente em árvores plantadas e
+            ecossistemas recuperados. A sua contribuição faz a diferença.
+        </p>
 
-    <h3 class="secao-subtitulo">Canais de Doação</h3>
-    
-    <ul class="lista-doacao">
+        <h3 class="secao-subtitulo">Canais de Doação</h3>
         
-        <li class="doacao-item">
-            <strong>PIX (Email):</strong>
-            <p>Use o nosso email como chave principal.</p>
-            <code>doar@plantingthefuture.com</code>
-        </li>
-        
-        <li class="doacao-item">
-            <strong>Transferência Bancária:</strong>
-            <p>
-                Banco Verde S/A (Cód. 123)<br>
-                Agência: 0001<br>
-                Conta Corrente: 98765-4<br>
-                CNPJ: 12.345.678/0001-99
-            </p>
-        </li>
-    </ul>
-</section>
+        <ul class="lista-doacao">
+            
+            <li class="doacao-item">
+                <strong>PIX (Email):</strong>
+                <p>Use o nosso email como chave principal.</p>
+                <code>doar@plantingthefuture.com</code>
+            </li>
+            
+            <li class="doacao-item">
+                <strong>Transferência Bancária:</strong>
+                <p>
+                    Banco Verde S/A (Cód. 123)<br>
+                    Agência: 0001<br>
+                    Conta Corrente: 98765-4<br>
+                    CNPJ: 12.345.678/0001-99
+                </p>
+            </li>
+        </ul>
+    </section>
 
 </main>
 
@@ -112,6 +125,8 @@
             &copy; 2025 Planting the Future. Todos os direitos reservados.
         </p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

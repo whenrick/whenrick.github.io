@@ -32,7 +32,7 @@ body {
     padding: 20px 5%;
 }
 
-.cabecalho-principal {
+.navbar {
     display: flex;
     align-items: center;
     border-bottom: 2px solid transparent;
@@ -40,24 +40,24 @@ body {
     justify-content: space-between;
 }
 
-.logo-texto {
+.logo {
     font-size: 2em;
     margin: 0;
     text-transform: uppercase;
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.menu-lista {
+.menu-links {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    gap: 20px;
 }
 
-.menu-item {
-    margin-left: 20px;
-}
-
-.menu-item a {
+.menu-links li a {
     color: var(--cor-texto);
     text-decoration: none;
     font-weight: bold;
@@ -65,12 +65,22 @@ body {
     transition: color 0.10s;
     text-transform: uppercase;
 }
-    
-.menu-item a:hover {
+
+.menu-links li a:hover {
     color: var(--cor-corda);
     border-bottom: 0.1rem solid var(--cor-corda);
     padding-bottom: 0.5rem;
     font-size: 1.0em;
+}
+
+.menu-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--cor-texto);
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 1001;
 }
 
 .hero-banner {
@@ -84,7 +94,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 10%; 
+    padding-left: 10%;
 }
 
 .hero-banner .titulo-pagina {
@@ -94,7 +104,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1.1;
-   
+}
+
 .titulo-linha-1,
 .titulo-linha-2,
 .titulo-linha-3 {
@@ -110,7 +121,6 @@ body {
     font-size: 3rem;
     color: var(--cor-corda);
     letter-spacing: 1px;
-}
 }
 
 .hero-subtexto {
@@ -145,6 +155,7 @@ body {
     color: var(--cor-verde);
     font-size: 2.2em;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .secao-titulo {
@@ -167,6 +178,11 @@ body {
     font-size: small;
 }
 
+.secao-paragrafo {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
 .info-contato a,
 .secao-voluntario a {
     color: var(--cor-texto);
@@ -176,8 +192,17 @@ body {
 
 .info-contato a:hover,
 .secao-voluntario a:hover {
-    color: var(--cor-corda); 
+    color: var(--cor-corda);
     text-decoration: underline;
+}
+
+.info-contato {
+    font-style: normal;
+    line-height: 1.7;
+}
+
+.contato-item {
+    margin-bottom: 15px;
 }
 
 .projeto-card {
@@ -188,45 +213,43 @@ body {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    gap: 25px; 
+    gap: 25px;
 }
 
-.projeto-imagem {  
+.projeto-imagem {
     flex-shrink: 0;
     width: 300px;
     height: 220px;
-    object-fit: cover; 
-    border-radius: 8px; 
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .projeto-info {
-    flex: 1; 
+    flex: 1;
+    line-height: 1.6;
 }
 
-
 .projeto-card:nth-child(even) {
-    flex-direction: row-reverse; 
+    flex-direction: row-reverse;
 }
 
 .projeto-titulo {
     color: var(--cor-verde);
     margin-top: 0;
+    font-size: 1.5em;
+}
+
+.projeto-lista-metas {
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
 .secao-voluntario {
     text-align: center;
 }
 
-
 .secao-voluntario .secao-titulo {
-    border-bottom: none; 
-}
-
-
-.secao-voluntario .lista-passos {
-    max-width: 450px; 
-    margin: 20px auto;
-    text-align: left;
+    border-bottom: none;
 }
 
 .secao-doacao {
@@ -236,6 +259,7 @@ body {
 .secao-doacao .secao-titulo {
     border-bottom: none;
 }
+
 .secao-doacao .secao-subtitulo {
     text-transform: uppercase;
 }
@@ -247,7 +271,6 @@ body {
     margin: 20px auto;
 }
 
-/* 4. O "Cartão" de cada item de doação (o <li>) */
 .doacao-item {
     background-color: var(--cor-fundo-secundario);
     border: 1px solid var(--cor-corda);
@@ -259,21 +282,19 @@ body {
 }
 
 .doacao-item code {
-    display: block; 
-    background-color: var(--cor-fundo); 
+    display: block;
+    background-color: var(--cor-fundo);
     padding: 15px;
     border-radius: 4px;
     color: var(--cor-texto);
     margin-top: 10px;
-    
-
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.1em;
     font-weight: bold;
 }
 
 .formulario-cadastro {
-    max-width: 650px; 
+    max-width: 650px;
     margin: 40px auto;
 }
 
@@ -281,15 +302,8 @@ body {
     background-color: var(--cor-fundo-secundario);
     border: 1px solid var(--cor-corda);
     border-radius: 8px;
-    padding: 30px; 
-    margin-bottom: 30px; 
-}
-
-.titulo-pagina {
-    color: var(--cor-verde);
-    font-size: 2.2em;
-    text-transform: uppercase; 
-    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
 }
 
 .formulario-introducao {
@@ -310,10 +324,10 @@ body {
 }
 
 .form-group label {
-    display: block; 
-    margin-bottom: 8px; 
+    display: block;
+    margin-bottom: 8px;
     font-weight: bold;
-    color: var(--cor-texto); 
+    color: var(--cor-texto);
     text-transform: uppercase;
 }
 
@@ -329,7 +343,7 @@ textarea {
     border: 1px solid var(--cor-corda);
     border-radius: 4px;
     font-size: 1em;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     transition: all 0.3s;
 }
 
@@ -338,41 +352,10 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="date"]:focus,
 textarea:focus {
-    outline: none;     
-    border-color: var(--cor-verde); 
+    outline: none;
+    border-color: var(--cor-verde);
     box-shadow: 0 0 8px rgba(139, 195, 74, 0.5);
 }
-
-
-.label-principal {
-    margin-bottom: 15px;
-    display: block; 
-}
-
-.label-principal {
-    margin-bottom: 15px;
-    display: block;
-}
-
-.checkbox-item {
-    display: flex;
-    align-items: center; 
-    margin-bottom: 10px;
-}
-
-.checkbox-item input[type="checkbox"] {
-    width: auto;
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
-.checkbox-item label {
-    font-weight: normal;
-    margin-bottom: 0;
-}
-
 
 legend {
     color: var(--cor-verde);
@@ -418,13 +401,6 @@ legend {
     color: var(--cor-fundo);
 }
 
-.rodape-principal {
-    text-align: center;
-    border-top: 2px solid var(--cor-corda);
-    padding-top: 20px;
-    font-size: 0.9em;
-}
-
 #mensagem-sucesso {
     max-width: 650px;
     margin-left: auto;
@@ -433,8 +409,8 @@ legend {
     background-color: var(--cor-fundo-secundario);
     padding: 30px;
     border-radius: 8px;
-    box-sizing: border-box; 
-    border: 2px solid var(--cor-verde); 
+    box-sizing: border-box;
+    border: 2px solid var(--cor-verde);
     text-align: center;
     text-transform: uppercase;
 }
@@ -443,28 +419,46 @@ legend {
     display: none;
 }
 
-/* DESIGN RESPONSIVO (MOBILE) */
-
 @media (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
 
-    .cabecalho-principal {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .menu-links {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--cor-fundo-secundario);
         flex-direction: column;
-        gap: 20px;
-        padding: 20px 10px; 
-    }
-
-    .navegacao-principal {
-        margin: 0;
-    }
-
-    .menu-lista {
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
+        align-items: center;
+        gap: 30px;
+        z-index: 1000;
     }
 
-    .menu-item {
+    .menu-links.ativo {
+        display: flex;
+    }
+
+    .menu-links li {
         margin-left: 0;
+    }
+
+    .menu-links li a {
+        font-size: 1.5em;
+    }
+
+    .menu-links li a:hover {
+        color: var(--cor-corda);
+        border-bottom: none;
+        padding-bottom: 0;
     }
 
     .hero-banner {
@@ -476,7 +470,7 @@ legend {
     .hero-banner .titulo-pagina {
         line-height: 1.2;
     }
-    
+
     .titulo-linha-1,
     .titulo-linha-3 {
         font-size: 3rem;
@@ -504,25 +498,23 @@ legend {
     .projeto-imagem {
         width: 100%;
         height: auto;
-        max-height: 220px; 
+        max-height: 220px;
     }
 
     .projeto-card:nth-child(even) {
         flex-direction: column;
     }
 
-
     .formulario-introducao,
-    fieldset,
+    .fieldset,
     .doacao-item {
         padding: 15px;
     }
-    
+
     input[type="text"],
     input[type="email"],
     input[type="tel"],
     textarea {
         width: 100%;
     }
-
 }
